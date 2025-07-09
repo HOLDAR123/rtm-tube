@@ -1,0 +1,103 @@
+@import '~styles/mixins';
+
+.uploads {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  flex: 1;
+
+  &__title {
+    font-weight: 600;
+    font-size: 16px;
+    color: color(var(--color-primary), 0.7);
+  }
+
+  .scrollWrapper {
+    position: relative;
+    width: 100%;
+    height: 108px;
+    overflow-x: scroll;
+    border-radius: 12px;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+
+  &__files {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    gap: 15px;
+    width: max-content;
+    height: 108px;
+    border-radius: 12px;
+    overflow-x: auto;
+
+    .audioWrapper {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      width: 320px;
+      height: 100%;
+      padding: 14px;
+      background-color: color(var(--background-primary));
+      border: 1px solid color(var(--color-primary), 0.2);
+      border-radius: 10px;
+
+      & > div {
+        background-color: transparent !important;
+      }
+
+      &__header {
+        display: flex;
+        justify-content: space-between;
+        gap: 10px;
+        flex-grow: 1;
+      }
+
+      .image {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+  }
+
+  .leftButton,
+  .rightButton {
+    position: absolute;
+    top: calc(50% + 19px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 24px;
+    height: 24px;
+    opacity: 0.4;
+    border-radius: 50%;
+    transition:
+      opacity 0.2s linear,
+      background 0.2s linear;
+    z-index: 3;
+  }
+
+  .leftButton {
+    left: 10px;
+    transform: rotate(90deg) translateX(-50%);
+  }
+
+  .rightButton {
+    right: 10px;
+    transform: rotate(-90deg) translateX(50%);
+  }
+
+  &:hover {
+    .leftButton,
+    .rightButton {
+      background: color(var(--background-secondary));
+      opacity: 1;
+    }
+  }
+}

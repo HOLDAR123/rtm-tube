@@ -1,0 +1,108 @@
+@import '~styles/mixins';
+
+.subscriptions {
+  height: 100%;
+  .container {
+    display: flex;
+    flex-direction: column;
+    padding: 40px;
+    gap: 40px;
+    border-radius: 30px;
+    background: color(var(--background-primary), 0.9);
+
+    .label {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      border-radius: 200px;
+      padding: 10px 10px 10px 16px;
+      background: color(var(--color-primary-inverse), 0.2);
+
+      .input {
+        flex: 1;
+        border: none;
+        color: inherit;
+        font-size: 16px;
+        line-height: 20px;
+        background: transparent;
+        outline: none;
+      }
+      .search {
+        border: none;
+        width: 50px;
+        height: 50px;
+      }
+    }
+    .cards {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+      max-height: calc(100% - 110px);
+      overflow-y: auto;
+
+      &::-webkit-scrollbar {
+        display: none;
+      }
+
+      .card {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        padding: 10px 16px;
+        background: var(--catalog-card-color);
+
+        &:nth-child(1) {
+          border-radius: 12px 12px 0px 0px;
+        }
+        &:nth-last-child(1) {
+          border-radius: 0px 0px 12px 12px;
+        }
+
+        &:only-child {
+          border-radius: 12px;
+        }
+
+        &__info {
+          display: flex;
+          align-items: center;
+          flex: 1;
+          gap: 16px;
+        }
+        &__imageWrapper {
+          width: 40px;
+          height: 40px;
+          border-radius: 200px;
+          overflow: hidden;
+        }
+        &__name {
+          flex: 1;
+          font-size: 16px;
+          font-weight: 500;
+          line-height: 20px;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          display: -webkit-box;
+          -webkit-line-clamp: 1;
+          -webkit-box-orient: vertical;
+        }
+        &__actions {
+          display: flex;
+          align-items: center;
+          gap: 20px;
+        }
+        &__price {
+          padding: 12px 14px 12px 14px;
+          border-radius: 12px;
+          background: color(var(--color-purple));
+          color: rgb(255, 255, 255);
+          font-size: 16px;
+          font-weight: 500;
+          line-height: 20px;
+        }
+        &__button {
+          border-radius: 10px;
+        }
+      }
+    }
+  }
+}

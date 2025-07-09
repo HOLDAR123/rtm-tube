@@ -1,0 +1,44 @@
+@import '~styles/mixins';
+
+.panel {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 400px;
+  padding-block: 20px;
+  background: color(var(--background-primary), 0.9);
+  border-radius: 30px;
+  overflow: hidden;
+
+  &__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    width: 100%;
+    padding-inline: 20px;
+  }
+
+  &__title {
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 22px;
+  }
+
+  &__add {
+    position: relative;
+    width: 40px;
+    height: 40px;
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    overflow-y: auto;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+}

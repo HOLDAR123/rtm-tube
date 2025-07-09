@@ -1,0 +1,55 @@
+@import '~styles/mixins';
+
+.edit {
+  display: grid;
+  gap: 40px;
+  width: 100%;
+
+  .description {
+    display: grid;
+    gap: 12px;
+
+    &__title {
+      font-weight: 600;
+      font-size: 16px;
+      line-height: 19.5px;
+      color: color(var(--color-primary), 0.7);
+    }
+
+    &__label {
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+      height: 200px;
+      padding: 16px 20px;
+      background-color: color(var(--background-primary));
+      border-radius: 10px;
+    }
+
+    &__textarea {
+      flex: 1;
+      background-color: transparent;
+      font-size: 16px;
+      line-height: 19.5px;
+      resize: none;
+      border: none;
+      outline: none;
+      color: inherit;
+
+      &::placeholder {
+        color: color(var(--text-form-color));
+      }
+
+      &::-webkit-scrollbar {
+        display: none;
+      }
+    }
+
+    &__button {
+      align-self: flex-end;
+      width: 118px;
+      height: 40px;
+      line-height: 19.5px;
+    }
+  }
+}

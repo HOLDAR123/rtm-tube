@@ -1,0 +1,41 @@
+:root {
+  --font-size: 16px;
+  --accent-color: linear-gradient(
+    90deg,
+    rgba(136, 61, 207, 0.7) 0%,
+    rgba(167, 75, 255, 0.7) 49.5%,
+    rgba(100, 45, 153, 0.7) 100%
+  );
+  --accent-border-color: 100, 45, 153, 0.7;
+  --text-form-color: 155, 155, 155;
+  --color-purple: 129, 80, 201;
+  --color-red: 236, 75, 91;
+}
+
+body {
+  &[data-theme='light'] {
+    --color-primary: 0, 0, 0;
+    --color-primary-inverse: 255, 255, 255;
+    --background-primary: 241, 240, 245;
+    --background-secondary: 226, 227, 233;
+    --border-color: 80, 81, 88;
+    --background-input: 241, 240, 245;
+    --wave-color: 185, 121, 248;
+    --color-date: 0, 0, 0;
+    --panel-item-bg: rgba(var(--color-primary-inverse), 0.5);
+    --catalog-card-color: rgb(var(--background-secondary));
+  }
+
+  &[data-theme='dark'] {
+    --color-primary: 255, 255, 255;
+    --color-primary-inverse: 0, 0, 0;
+    --background-primary: 26, 28, 33;
+    --background-secondary: 51, 52, 56;
+    --border-color: 210, 213, 225;
+    --background-input: 26, 28, 33;
+    --wave-color: 167, 75, 255;
+    --color-date: 147 145 155;
+    --panel-item-bg: rgba(var(--color-primary-inverse), 0.2);
+    --catalog-card-color: rgba(var(--color-primary-inverse), 0.2);
+  }
+}

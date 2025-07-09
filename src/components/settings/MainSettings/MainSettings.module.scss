@@ -1,0 +1,48 @@
+@import '~styles/mixins';
+
+.settings {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  gap: 40px;
+
+  .subscribe {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    height: 67px;
+    padding: 0px 16px;
+    border-radius: 12px;
+    background: color(var(--background-secondary));
+
+    &__title {
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 19.5px;
+    }
+
+    &__right {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+
+      &_expire {
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 17.07px;
+        color: color(var(--text-primary-opacity));
+      }
+
+      &_button {
+        height: 37px;
+        padding: 0px 18px;
+        font-weight: 500;
+        font-size: 14px;
+        color: #ec4b5b;
+        border-radius: 200px;
+        background: rgba(235, 235, 245, 0.05);
+      }
+    }
+  }
+}

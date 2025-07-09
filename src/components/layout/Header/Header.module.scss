@@ -1,0 +1,42 @@
+@import '~styles/mixins';
+
+.header {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  width: 100%;
+  max-width: 100vw;
+  height: 80px;
+  padding: 10px 40px;
+
+  &__logo {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding-left: 15px;
+  }
+
+  &__title {
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 24px;
+    color: color(var(--color-primary));
+  }
+
+  &__button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    min-width: 119px;
+    height: 40px;
+    padding: 0 20px;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 17px;
+    background: color(var(--color-purple));
+    border: 1px solid color(var(--color-primary), 0.2);
+    border-radius: 200px;
+    color: rgb(255, 255, 255);
+  }
+}

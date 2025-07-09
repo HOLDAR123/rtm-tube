@@ -1,0 +1,16 @@
+@import '~styles/mixins';
+
+.upload {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: color(var(--background-primary));
+  aspect-ratio: 1 / 1;
+  border-radius: 12px;
+  border: 1px solid color(var(--color-primary), 0.2);
+  cursor: pointer;
+
+  .input {
+    display: none;
+  }
+}

@@ -1,0 +1,42 @@
+@import '~styles/mixins';
+
+.card {
+  position: relative;
+  width: 100%;
+  min-height: 140px;
+  background: var(--catalog-card-color);
+  overflow: hidden;
+  &:nth-child(1) {
+    border-radius: 12px 12px 0px 0px;
+  }
+  &:nth-last-child(1) {
+    border-radius: 0px 0px 12px 12px;
+  }
+  &:only-child {
+    border-radius: 12px;
+  }
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -150px;
+    height: 100%;
+    width: 10%;
+    background: linear-gradient(
+      to right,
+      transparent 0%,
+      #26b3ff17 50%,
+      transparent 100%
+    );
+    animation: load 1s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+  }
+}
+
+@keyframes load {
+  from {
+    left: -150px;
+  }
+  to {
+    left: 100%;
+  }
+}
